@@ -1,6 +1,6 @@
-h1 brain-games-hiderovich
+brain-games-hiderovich
 =========================
 
-h3 Setup
-    $ make install
+### Setup
+    dir $ make install
 
