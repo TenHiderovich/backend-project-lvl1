@@ -1,4 +1,4 @@
-import setName from './src';
+import setName from '..';
 
 console.log("Welcome to the Brain Games!");
 
