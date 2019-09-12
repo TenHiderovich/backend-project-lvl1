@@ -8,14 +8,14 @@
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+        "build": "cross-env NODE_ENV=production & babel src --out-dir dist --source-maps inline",
         "prepublishOnly": "npm run build"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/TenHiderovich/backend-project-lvl1.git"
     },
-    "author": "",
+    "author": "hiderovich",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/TenHiderovich/backend-project-lvl1/issues"
@@ -28,6 +28,7 @@
         "@babel/cli": "^7.6.0",
         "@babel/core": "^7.6.0",
         "@babel/node": "^7.6.1",
-        "@babel/preset-env": "^7.6.0"
+        "@babel/preset-env": "^7.6.0",
+        "cross-env": "^5.2.1"
     }
 }
