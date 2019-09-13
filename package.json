@@ -22,17 +22,18 @@
     },
     "homepage": "https://github.com/TenHiderovich/backend-project-lvl1#readme",
     "bin": {
-        "brain-games": "dist/bin/brain-games.js"
+        "brain-games": "dist/bin/brain-games.js",
+        "brain-even": "dist/bin/brain-even.js"
     },
     "dependencies": {
+        "readline-sync": "^1.4.10"
+    },
+    "devDependencies": {
         "@babel/cli": "^7.6.0",
         "@babel/core": "^7.6.0",
         "@babel/node": "^7.6.1",
         "@babel/preset-env": "^7.6.0",
         "cross-env": "^5.2.1",
-        "readline-sync": "^1.4.10"
-    },
-    "devDependencies": {
         "babel-eslint": "^10.0.3",
         "eslint": "^6.3.0",
         "eslint-config-airbnb-base": "^14.0.0",
