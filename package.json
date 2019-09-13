@@ -1,6 +1,6 @@
 {
     "name": "brain-games",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "description": "my first npm packфge",
     "main": "dist/index.js",
     "files": [
