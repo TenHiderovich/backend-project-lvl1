@@ -1,38 +1,35 @@
 import readlineSync from 'readline-sync';
+import calcGame from './games/calcGame';
+import evenOrOdd from './games/gameAnswer';
 
+export default (gameType) => {
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hi ${userName}!`);
 
-const userName = readlineSync.question('May I have your name? ');
+  const iter = (count) => {
+    if (count >= 3) {
+      console.log(`Congratulations, ${userName}!`);
+      return;
+    }
 
-console.log(`Hi ${userName}!`);
+    const game = {
+      evenOrOdd,
+      calcGame,
+    };
 
+    const { question, correctAnswer } = game[gameType]();
+    console.log(`Question: ${question}`);
 
-const getRandomInt = () => Math.floor(Math.random() * (100 - 1) + 1);
+    const answer = readlineSync.question('Your answer: ').toLowerCase();
 
-const isEven = (int) => int % 2 === 0;
+    if (String(correctAnswer) === String(answer)) {
+      console.log('Correct!');
+      iter(count + 1);
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${userName}!`);
+    }
+  };
 
-const getAnswer = (count = 0) => {
-  const randomInt = getRandomInt();
-
-  if (count >= 3) {
-    console.log(`Congratulations, ${userName}!`);
-    return;
-  }
-
-  console.log(`Question: ${randomInt}`);
-
-  const answer = readlineSync.question('Your answer: ').toLowerCase();
-
-  const correct1 = isEven(randomInt) && answer === 'yes';
-  const correct2 = !isEven(randomInt) && answer === 'no';
-  const oppositeAnswerType = answer === 'yes' ? 'no' : 'yes';
-
-  if (correct1 || correct2) {
-    console.log('Correct!');
-    getAnswer(count + 1);
-  } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${oppositeAnswerType}'`);
-    console.log(`Let's try again, ${userName}!`);
-  }
+  return iter(0);
 };
-
-export default getAnswer;

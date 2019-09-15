@@ -1,7 +1,7 @@
 {
     "name": "brain-games",
-    "version": "1.0.0",
-    "description": "my first npm packфge",
+    "version": "1.0.1",
+    "description": "my first npm package",
     "main": "dist/index.js",
     "files": [
         "dist"
@@ -23,7 +23,8 @@
     "homepage": "https://github.com/TenHiderovich/backend-project-lvl1#readme",
     "bin": {
         "brain-games": "dist/bin/brain-games.js",
-        "brain-even": "dist/bin/brain-even.js"
+        "brain-even": "dist/bin/brain-even.js",
+        "brain-calc": "dist/bin/brain-calc.js"
     },
     "dependencies": {
         "readline-sync": "^1.4.10"
