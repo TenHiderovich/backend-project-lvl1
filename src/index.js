@@ -1,7 +1,8 @@
 import readlineSync from 'readline-sync';
 import calcGame from './games/calcGame';
 import evenOrOdd from './games/gameAnswer';
-import gcd from './games/gcdGame';
+import gcd from './games/gameGcd';
+import progression from './games/gameProgression';
 
 export default (gameType) => {
   const userName = readlineSync.question('May I have your name? ');
@@ -17,6 +18,7 @@ export default (gameType) => {
       evenOrOdd,
       calcGame,
       gcd,
+      progression,
     };
 
     const { question, correctAnswer } = game[gameType]();
