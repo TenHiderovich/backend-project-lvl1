@@ -9,7 +9,7 @@ build:
 	npm run build
 
 start:
-	npx babel-node 'src/bin/brain-calc.js'
+	npx babel-node 'src/bin/brain-gcd.js'
 
 publish:
 	npm publish --dry-run
