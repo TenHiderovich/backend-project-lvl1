@@ -24,3 +24,21 @@ export const getRandomProgressList = (length) => {
 
   return list;
 };
+
+
+export const isPrime = (num) => {
+  if (num === 2) {
+    return true;
+  }
+
+  let i = 2;
+  const limit = Math.sqrt(num);
+  while (i <= limit) {
+    if (num % i === 0) {
+      return false;
+    }
+    i += 1;
+  }
+
+  return true;
+};
