@@ -9,3 +9,7 @@ brain-games-hiderovich
     $ make install
 
 
+### Start
+    $ make start
+
+
