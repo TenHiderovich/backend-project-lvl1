@@ -1,4 +1,6 @@
 import readlineSync from 'readline-sync';
+
+// Games
 import calcGame from './games/Calc';
 import evenOrOdd from './games/EvenOrOdd';
 import gcd from './games/Gcd';
