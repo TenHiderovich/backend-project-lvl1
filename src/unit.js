@@ -1,4 +1,4 @@
-export const getRandomInt = (max) => Math.floor(Math.random() * (max - 1) + 1);
+export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 export const isEven = (int) => int % 2 === 0;
 
@@ -14,8 +14,8 @@ export const getNOD = (a, b) => {
 
 
 export const getRandomProgressList = (length) => {
-  const randomInt = getRandomInt(10);
-  const step = getRandomInt(10);
+  const randomInt = getRandomInt(1, 10);
+  const step = getRandomInt(1, 10);
   const list = [randomInt];
 
   for (let i = 1; i < length; i += 1) {

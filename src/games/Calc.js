@@ -1,8 +1,8 @@
 import { getRandomInt } from '../unit';
 
 export default () => {
-  const randomIntFirst = getRandomInt(100);
-  const randomIntSecond = getRandomInt(100);
+  const randomIntFirst = getRandomInt(1, 100);
+  const randomIntSecond = getRandomInt(1, 100);
 
   const exp = {
     1: randomIntFirst + randomIntSecond,
@@ -16,7 +16,7 @@ export default () => {
     3: `${randomIntFirst} * ${randomIntSecond}`,
   };
 
-  const randomExp = getRandomInt(3);
+  const randomExp = getRandomInt(1, 3);
   const correctAnswer = exp[randomExp];
   const question = expStr[randomExp];
 
