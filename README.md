@@ -5,9 +5,10 @@ brain-games-hiderovich
 [![Build Status](https://travis-ci.org/hexlet-boilerplates/nodejs-package.svg?branch=master)](https://travis-ci.org/hexlet-boilerplates/nodejs-package)
 
 
+### Пока являюсь счастливым обладателем windows, поэтому аскинему записать не смог(
+
 ### Setup
     $ make install
-
 
 ### Start
     $ make start
