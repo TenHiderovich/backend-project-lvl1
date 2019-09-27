@@ -2,7 +2,6 @@
     "name": "brain-games",
     "version": "4.2.1",
     "description": "my first npm package",
-    "main": "dist/index.js",
     "files": [
         "dist"
     ],
@@ -17,6 +16,7 @@
     },
     "author": "hiderovich",
     "license": "ISC",
+    "keywords": "",
     "bugs": {
         "url": "https://github.com/TenHiderovich/backend-project-lvl1/issues"
     },

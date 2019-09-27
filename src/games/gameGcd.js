@@ -1,4 +1,15 @@
-import { getRandomInt, getNOD } from '../unit';
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+const getNOD = (a, b) => {
+  if (b > a) {
+    return getNOD(b, a);
+  }
+
+  if (!b) return a;
+
+  return getNOD(b, a % b);
+};
+
 
 export default () => {
   const randomIntFirst = getRandomInt(1, 100);

@@ -1,4 +1,4 @@
-import { getRandomInt } from '../unit';
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 
 export default () => {
   const randomIntFirst = getRandomInt(1, 100);
