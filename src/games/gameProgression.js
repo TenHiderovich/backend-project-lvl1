@@ -19,8 +19,10 @@ export default () => {
   const splicedElement = list.splice(rundomElementPosition, 1, '..');
   const correctAnswer = splicedElement[0];
   const question = list;
+  const introductoryQuestion = 'What number is missing in the progression?';
 
   return {
+    introductoryQuestion,
     question,
     correctAnswer,
   };

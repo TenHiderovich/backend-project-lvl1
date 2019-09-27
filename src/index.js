@@ -8,6 +8,19 @@ import progression from './games/gameProgression';
 import prime from './games/gamePrime';
 
 export default (gameType) => {
+  const game = {
+    evenOrOdd,
+    calcGame,
+    gcd,
+    progression,
+    prime,
+  };
+
+  const { introductoryQuestion } = game[gameType]();
+
+  console.log('Welcome to the Brain Games!');
+  console.log(introductoryQuestion);
+
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hi ${userName}!`);
 
@@ -18,14 +31,6 @@ export default (gameType) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-
-    const game = {
-      evenOrOdd,
-      calcGame,
-      gcd,
-      progression,
-      prime,
-    };
 
     const { question, correctAnswer } = game[gameType]();
     console.log(`Question: ${question}`);

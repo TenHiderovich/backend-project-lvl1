@@ -16,8 +16,10 @@ export default () => {
   const randomIntSecond = getRandomInt(1, 100);
   const question = `${randomIntFirst}  ${randomIntSecond}`;
   const correctAnswer = getNOD(randomIntFirst, randomIntSecond);
+  const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
   return {
+    introductoryQuestion,
     question,
     correctAnswer,
   };
