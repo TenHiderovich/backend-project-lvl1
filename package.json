@@ -16,7 +16,11 @@
     },
     "author": "hiderovich",
     "license": "ISC",
-    "keywords": "",
+    "keywords": [
+        "game",
+        "api",
+        "nodejs"
+    ],
     "bugs": {
         "url": "https://github.com/TenHiderovich/backend-project-lvl1/issues"
     },

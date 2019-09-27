@@ -12,7 +12,9 @@ export default (gameType) => {
   console.log(`Hi ${userName}!`);
 
   const iter = (count) => {
-    if (count >= 3) {
+    const gameTotal = 3;
+
+    if (count >= gameTotal) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }

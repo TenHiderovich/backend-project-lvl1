@@ -16,9 +16,11 @@ export default () => {
     3: `${randomIntFirst} * ${randomIntSecond}`,
   };
 
-  const randomExp = getRandomInt(1, 3);
-  const correctAnswer = exp[randomExp];
-  const question = expStr[randomExp];
+  const mathExpressions = ['+', '-', '*'];
+
+  const randomInt = getRandomInt(1, mathExpressions.length);
+  const correctAnswer = exp[randomInt];
+  const question = expStr[randomInt];
 
   return {
     question,
