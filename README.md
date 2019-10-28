@@ -11,7 +11,7 @@ brain-games-hiderovich
 ### Start
     $ make start
 
-[![asciicast](https://asciinema.org/connect/3b091a3b-664f-4c7b-9625-06e670a7e7a4)]
+[![asciicast](https://asciinema.org/connect/3b091a3b-664f-4c7b-9625-06e670a7e7a4)]()
 
 
 
