@@ -33,7 +33,7 @@ export default (gameType) => {
     }
 
     const { question, correctAnswer } = game[gameType]();
-    console.log(`Question: ${question}`);
+    console.log(`Question: ${String(question)}`);
 
     const answer = readlineSync.question('Your answer: ').toLowerCase();
 
