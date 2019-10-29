@@ -25,3 +25,7 @@ brain-games-hiderovich
 
 ### Install Brain-games and start Brain-progression
 [![asciicast](https://asciinema.org/a/2Sv1V71VD5S6Q0bcTYbT8his7.svg)](https://asciinema.org/a/2Sv1V71VD5S6Q0bcTYbT8his7)
+
+
+### Install Brain-games and start Brain-prime
+[![asciicast](https://asciinema.org/a/xlMdNQHRPgx1i1Z7sRo2FI2MY.svg)](https://asciinema.org/a/xlMdNQHRPgx1i1Z7sRo2FI2MY)
