@@ -17,3 +17,7 @@ brain-games-hiderovich
 
 ### Install Brain-games and start Brain-calc
 [![asciicast](https://asciinema.org/a/Gm4B95bJJEeCux6MN0nsGJ7jq.svg)](https://asciinema.org/a/Gm4B95bJJEeCux6MN0nsGJ7jq)
+
+
+### Install Brain-games and start Brain-gcd
+[![asciicast](https://asciinema.org/a/T7fSztZ7d3IKwvDVcoDs7wgt9.svg)](https://asciinema.org/a/T7fSztZ7d3IKwvDVcoDs7wgt9)
