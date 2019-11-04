@@ -1,4 +1,4 @@
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+import getRandomInt from '../getRandomInt';
 
 const getRandomProgressList = (length) => {
   const randomInt = getRandomInt(1, 10);

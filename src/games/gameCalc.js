@@ -1,4 +1,5 @@
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
+
+import getRandomInt from '../getRandomInt';
 
 export default () => {
   const randomIntFirst = getRandomInt(1, 100);
