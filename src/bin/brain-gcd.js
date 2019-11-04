@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import startGame from '..';
+import games from '..';
 
-startGame('gcd');
+const gameStart = games();
+
+gameStart.brainGcd();

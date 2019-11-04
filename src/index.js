@@ -7,7 +7,7 @@ import gcd from './games/gameGcd';
 import progression from './games/gameProgression';
 import prime from './games/gamePrime';
 
-export default (gameType) => {
+export default () => {
   const games = {
     evenOrOdd,
     calcGame,
@@ -16,18 +16,12 @@ export default (gameType) => {
     prime,
   };
 
-  const { introductoryQuestion } = games[gameType]();
+  let userName = '';
 
-  console.log('Welcome to the Brain Games!');
-  console.log(introductoryQuestion);
-
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hi ${userName}!`);
-
-  const iter = (count) => {
+  const gameEngine = (startCountValue, gameType) => {
     const gameTotal = 3;
 
-    if (count >= gameTotal) {
+    if (startCountValue >= gameTotal) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
@@ -39,12 +33,30 @@ export default (gameType) => {
 
     if (String(correctAnswer) === String(answer)) {
       console.log('Correct!');
-      iter(count + 1);
+      gameEngine(startCountValue + 1);
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
       console.log(`Let's try again, ${userName}!`);
     }
   };
 
-  return iter(0);
+  const initGame = (gameType) => {
+    const { introductoryQuestion } = games[gameType]();
+
+    console.log('Welcome to the Brain Games!');
+    console.log(introductoryQuestion);
+
+    userName = readlineSync.question('May I have your name? ');
+    console.log(`Hi ${userName}!`);
+
+    gameEngine(0, gameType);
+  };
+
+  return {
+    brainEven: initGame('evenOrOdd'),
+    brainCalc: initGame('calcGame'),
+    brainGcd: initGame('gcd'),
+    brainProgression: initGame('progression'),
+    brainPrime: initGame('prime'),
+  };
 };

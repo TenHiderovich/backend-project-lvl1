@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import startGame from '..';
+import games from '..';
 
-startGame('evenOrOdd');
+const gameStart = games();
+
+gameStart.brainEven();

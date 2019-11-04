@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
-import startGame from '..';
+import games from '..';
 
-startGame('progression');
+const gameStart = games();
+
+gameStart.brainProgression();
