@@ -11,13 +11,6 @@ brain-games-hiderovich
 ### Start
     $ make start
 
-### Install Brain-games and start Brain-even
-[![asciicast](https://asciinema.org/a/aCNKCghVTV47yAqVWQQjd25zm.svg)](https://asciinema.org/a/aCNKCghVTV47yAqVWQQjd25zm)
-
-
-### Install Brain-games and start Brain-calc
-[![asciicast](https://asciinema.org/a/Gm4B95bJJEeCux6MN0nsGJ7jq.svg)](https://asciinema.org/a/Gm4B95bJJEeCux6MN0nsGJ7jq)
-
 
 ### Install Brain-games and start Brain-gcd
 [![asciicast](https://asciinema.org/a/T7fSztZ7d3IKwvDVcoDs7wgt9.svg)](https://asciinema.org/a/T7fSztZ7d3IKwvDVcoDs7wgt9)
