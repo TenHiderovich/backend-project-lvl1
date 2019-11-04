@@ -1,6 +1,10 @@
 import getRandomInt from '../getRandomInt';
 
 const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
   if (num === 2) {
     return true;
   }
