@@ -1,22 +1,22 @@
 import getRandomInt from '../getRandomInt';
 
-const getRandomProgressList = (length) => {
-  const randomInt = getRandomInt(1, 10);
-  const step = getRandomInt(1, 10);
-  const list = [randomInt];
+const getRandomProgressList = (length, start, diff) => {
+  const progressList = [];
 
-  for (let i = 1; i < length; i += 1) {
-    list[i] = list[i - 1] + step;
+  for (let i = 0; i < length; i += 1) {
+    progressList[i] = start + diff * i;
   }
 
-  return list;
+  return progressList;
 };
 
 const introductoryQuestion = 'What number is missing in the progression?';
 
 export default () => {
   const rundomElementPosition = getRandomInt(1, 10);
-  const list = getRandomProgressList(10);
+  const diff = getRandomInt(1, 10);
+  const startList = getRandomInt(1, 10);
+  const list = getRandomProgressList(10, startList, diff);
   const splicedElement = list.splice(rundomElementPosition, 1, '..');
   const correctAnswer = splicedElement[0];
   const question = list;
