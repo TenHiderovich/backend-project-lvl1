@@ -10,13 +10,13 @@ const getNOD = (a, b) => {
   return getNOD(b, a % b);
 };
 
+const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
 export default () => {
   const randomIntFirst = getRandomInt(1, 100);
   const randomIntSecond = getRandomInt(1, 100);
   const question = `${randomIntFirst}  ${randomIntSecond}`;
   const correctAnswer = getNOD(randomIntFirst, randomIntSecond);
-  const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
   return {
     introductoryQuestion,

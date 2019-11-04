@@ -12,6 +12,7 @@ const getRandomProgressList = (length) => {
   return list;
 };
 
+const introductoryQuestion = 'What number is missing in the progression?';
 
 export default () => {
   const rundomElementPosition = getRandomInt(1, 10);
@@ -19,7 +20,6 @@ export default () => {
   const splicedElement = list.splice(rundomElementPosition, 1, '..');
   const correctAnswer = splicedElement[0];
   const question = list;
-  const introductoryQuestion = 'What number is missing in the progression?';
 
   return {
     introductoryQuestion,
