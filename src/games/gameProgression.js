@@ -18,8 +18,10 @@ export default () => {
   const diff = getRandomInt(1, 10);
   const startList = getRandomInt(1, 10);
   const list = getRandomProgressList(listLength, startList, diff);
-  const splicedElement = list.splice(rundomElementPosition, 1, '..');
-  const correctAnswer = splicedElement[0];
+
+  list.splice(rundomElementPosition, 1, '..');
+
+  const correctAnswer = String(startList + diff * rundomElementPosition);
   const question = list;
 
   return {

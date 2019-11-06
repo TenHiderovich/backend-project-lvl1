@@ -7,20 +7,19 @@ import gcd from './games/gameGcd';
 import progression from './games/gameProgression';
 import prime from './games/gamePrime';
 
-export default () => {
-  const games = {
-    evenOrOdd,
-    calcGame,
-    gcd,
-    progression,
-    prime,
-  };
+const gameTotal = 3;
+const games = {
+  evenOrOdd,
+  calcGame,
+  gcd,
+  progression,
+  prime,
+};
 
+export default () => {
   let userName = '';
 
   const gameEngine = (startCountValue, gameType) => {
-    const gameTotal = 3;
-
     if (startCountValue >= gameTotal) {
       console.log(`Congratulations, ${userName}!`);
       return;
@@ -31,7 +30,7 @@ export default () => {
 
     const answer = readlineSync.question('Your answer: ').toLowerCase();
 
-    if (String(correctAnswer) === String(answer)) {
+    if (correctAnswer === String(answer)) {
       console.log('Correct!');
       gameEngine(startCountValue + 1);
     } else {
@@ -53,10 +52,10 @@ export default () => {
   };
 
   return {
-    brainEven: initGame('evenOrOdd'),
+    // brainEven: initGame('evenOrOdd'),
     brainCalc: initGame('calcGame'),
-    brainGcd: initGame('gcd'),
-    brainProgression: initGame('progression'),
-    brainPrime: initGame('prime'),
+    // brainGcd: initGame('gcd'),
+    // brainProgression: initGame('progression'),
+    // brainPrime: initGame('prime'),
   };
 };

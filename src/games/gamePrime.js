@@ -25,7 +25,7 @@ const introductoryQuestion = 'Answer "yes" if given number is prime. Otherwise a
 
 export default () => {
   const question = getRandomInt(2, 100);
-  const correctAnswer = isPrime(question) ? 'yes' : 'no';
+  const correctAnswer = String(isPrime(question) ? 'yes' : 'no');
 
   return {
     introductoryQuestion,

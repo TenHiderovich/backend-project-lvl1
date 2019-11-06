@@ -13,18 +13,12 @@ export default () => {
     '*': randomIntFirst * randomIntSecond,
   };
 
-  const expressionsString = {
-    '+': `${randomIntFirst} + ${randomIntSecond}`,
-    '-': `${randomIntFirst} - ${randomIntSecond}`,
-    '*': `${randomIntFirst} * ${randomIntSecond}`,
-  };
-
   const mathExpressions = ['+', '-', '*'];
 
   const randomInt = getRandomInt(1, mathExpressions.length);
   const selectedExpression = mathExpressions[randomInt];
-  const correctAnswer = expressions[selectedExpression];
-  const question = expressionsString[selectedExpression];
+  const correctAnswer = String(expressions[selectedExpression]);
+  const question = `${randomIntFirst} ${selectedExpression} ${randomIntSecond}`;
 
   return {
     introductoryQuestion,
