@@ -1,3 +1,5 @@
+import gameEngine from '..';
+
 import getRandomInt from '../getRandomInt';
 
 const isEven = (int) => int % 2 === 0;
@@ -8,9 +10,5 @@ export default () => {
   const question = getRandomInt(1, 100);
   const correctAnswer = String(isEven(question) ? 'yes' : 'no');
 
-  return {
-    introductoryQuestion,
-    question,
-    correctAnswer,
-  };
+  gameEngine(introductoryQuestion, question, correctAnswer);
 };

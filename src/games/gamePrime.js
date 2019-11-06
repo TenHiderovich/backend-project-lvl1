@@ -1,3 +1,5 @@
+import gameEngine from '..';
+
 import getRandomInt from '../getRandomInt';
 
 const isPrime = (num) => {
@@ -27,9 +29,5 @@ export default () => {
   const question = getRandomInt(2, 100);
   const correctAnswer = String(isPrime(question) ? 'yes' : 'no');
 
-  return {
-    introductoryQuestion,
-    question,
-    correctAnswer,
-  };
+  gameEngine(introductoryQuestion, question, correctAnswer);
 };

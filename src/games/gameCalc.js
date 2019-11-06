@@ -1,3 +1,4 @@
+import gameEngine from '..';
 
 import getRandomInt from '../getRandomInt';
 
@@ -20,9 +21,5 @@ export default () => {
   const correctAnswer = String(expressions[selectedExpression]);
   const question = `${randomIntFirst} ${selectedExpression} ${randomIntSecond}`;
 
-  return {
-    introductoryQuestion,
-    question,
-    correctAnswer,
-  };
+  gameEngine(introductoryQuestion, question, correctAnswer);
 };

@@ -1,3 +1,5 @@
+import gameEngine from '..';
+
 import getRandomInt from '../getRandomInt';
 
 const getNOD = (a, b) => {
@@ -18,9 +20,5 @@ export default () => {
   const question = `${randomIntFirst}  ${randomIntSecond}`;
   const correctAnswer = String(getNOD(randomIntFirst, randomIntSecond));
 
-  return {
-    introductoryQuestion,
-    question,
-    correctAnswer,
-  };
+  gameEngine(introductoryQuestion, question, correctAnswer);
 };

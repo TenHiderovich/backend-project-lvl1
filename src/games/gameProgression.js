@@ -1,3 +1,5 @@
+import gameEngine from '..';
+
 import getRandomInt from '../getRandomInt';
 
 const getRandomProgressList = (length, start, diff) => {
@@ -24,9 +26,5 @@ export default () => {
   const correctAnswer = String(startList + diff * rundomElementPosition);
   const question = list;
 
-  return {
-    introductoryQuestion,
-    question,
-    correctAnswer,
-  };
+  gameEngine(introductoryQuestion, question, correctAnswer);
 };
