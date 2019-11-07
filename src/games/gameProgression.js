@@ -15,16 +15,23 @@ const getRandomProgressList = (length, start, diff) => {
 const introductoryQuestion = 'What number is missing in the progression?';
 
 export default () => {
-  const listLength = 10;
-  const rundomElementPosition = getRandomInt(1, listLength);
-  const diff = getRandomInt(1, 10);
-  const startList = getRandomInt(1, 10);
-  const list = getRandomProgressList(listLength, startList, diff);
+  const initGame = () => {
+    const listLength = 10;
+    const rundomElementPosition = getRandomInt(1, listLength);
+    const diff = getRandomInt(1, 10);
+    const startList = getRandomInt(1, 10);
+    const list = getRandomProgressList(listLength, startList, diff);
 
-  list.splice(rundomElementPosition, 1, '..');
+    list.splice(rundomElementPosition, 1, '..');
 
-  const correctAnswer = String(startList + diff * rundomElementPosition);
-  const question = list;
+    const correctAnswer = String(startList + diff * rundomElementPosition);
+    const question = list;
 
-  gameEngine(introductoryQuestion, question, correctAnswer);
+    return {
+      question,
+      correctAnswer,
+    };
+  };
+
+  gameEngine(introductoryQuestion, initGame);
 };
