@@ -8,6 +8,8 @@ const setDataForGame = () => {
   const randomIntFirst = getRandomInt(1, 100);
   const randomIntSecond = getRandomInt(1, 100);
 
+  // Вынести на уровень модуля не получится так как randomIntFirst и randomIntSecond
+  // зависят от контекста функции
   const expressions = {
     '+': randomIntFirst + randomIntSecond,
     '-': randomIntFirst - randomIntSecond,
