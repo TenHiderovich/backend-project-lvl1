@@ -32,4 +32,4 @@ const setDataForGame = () => {
   };
 };
 
-export default gameEngine(introductoryQuestion, setDataForGame);
+export default () => gameEngine(introductoryQuestion, setDataForGame);
