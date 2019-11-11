@@ -2,30 +2,28 @@ import gameEngine from '..';
 
 import getRandomInt from '../getRandomInt';
 
-const getNOD = (a, b) => {
+const getNod = (a, b) => {
   if (b > a) {
-    return getNOD(b, a);
+    return getNod(b, a);
   }
 
   if (!b) return a;
 
-  return getNOD(b, a % b);
+  return getNod(b, a % b);
 };
 
 const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
-export default () => {
-  const initGame = () => {
-    const randomIntFirst = getRandomInt(1, 100);
-    const randomIntSecond = getRandomInt(1, 100);
-    const question = `${randomIntFirst}  ${randomIntSecond}`;
-    const correctAnswer = String(getNOD(randomIntFirst, randomIntSecond));
+const setDataForGame = () => {
+  const randomIntFirst = getRandomInt(1, 100);
+  const randomIntSecond = getRandomInt(1, 100);
+  const question = `${randomIntFirst}  ${randomIntSecond}`;
+  const correctAnswer = String(getNod(randomIntFirst, randomIntSecond));
 
-    return {
-      question,
-      correctAnswer,
-    };
+  return {
+    question,
+    correctAnswer,
   };
-
-  gameEngine(introductoryQuestion, initGame);
 };
+
+export default gameEngine(introductoryQuestion, setDataForGame);

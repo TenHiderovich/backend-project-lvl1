@@ -4,29 +4,27 @@ import getRandomInt from '../getRandomInt';
 
 const introductoryQuestion = 'What is the result of the expression?';
 
-export default () => {
-  const initGame = () => {
-    const randomIntFirst = getRandomInt(1, 100);
-    const randomIntSecond = getRandomInt(1, 100);
+const setDataForGame = () => {
+  const randomIntFirst = getRandomInt(1, 100);
+  const randomIntSecond = getRandomInt(1, 100);
 
-    const expressions = {
-      '+': randomIntFirst + randomIntSecond,
-      '-': randomIntFirst - randomIntSecond,
-      '*': randomIntFirst * randomIntSecond,
-    };
-
-    const mathExpressions = ['+', '-', '*'];
-
-    const randomInt = getRandomInt(1, mathExpressions.length);
-    const selectedExpression = mathExpressions[randomInt];
-    const correctAnswer = String(expressions[selectedExpression]);
-    const question = `${randomIntFirst} ${selectedExpression} ${randomIntSecond}`;
-
-    return {
-      correctAnswer,
-      question,
-    };
+  const expressions = {
+    '+': randomIntFirst + randomIntSecond,
+    '-': randomIntFirst - randomIntSecond,
+    '*': randomIntFirst * randomIntSecond,
   };
 
-  gameEngine(introductoryQuestion, initGame);
+  const mathExpressions = Object.keys(expressions);
+
+  const randomInt = getRandomInt(0, mathExpressions.length - 1);
+  const selectedExpression = mathExpressions[randomInt];
+  const correctAnswer = String(expressions[selectedExpression]);
+  const question = `${randomIntFirst} ${selectedExpression} ${randomIntSecond}`;
+
+  return {
+    correctAnswer,
+    question,
+  };
 };
+
+export default gameEngine(introductoryQuestion, setDataForGame);

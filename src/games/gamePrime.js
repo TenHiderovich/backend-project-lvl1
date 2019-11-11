@@ -25,16 +25,14 @@ const isPrime = (num) => {
 
 const introductoryQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export default () => {
-  const initGame = () => {
-    const question = getRandomInt(2, 100);
-    const correctAnswer = String(isPrime(question) ? 'yes' : 'no');
+const setDataForGame = () => {
+  const question = getRandomInt(2, 100);
+  const correctAnswer = String(isPrime(question) ? 'yes' : 'no');
 
-    return {
-      question,
-      correctAnswer,
-    };
+  return {
+    question,
+    correctAnswer,
   };
-
-  gameEngine(introductoryQuestion, initGame);
 };
+
+export default gameEngine(introductoryQuestion, setDataForGame);

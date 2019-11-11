@@ -2,10 +2,10 @@ import gameEngine from '..';
 
 import getRandomInt from '../getRandomInt';
 
-const getRandomProgressList = (length, start, diff) => {
+const getRandomProgression = (progressionLength, start, diff) => {
   const progressList = [];
 
-  for (let i = 0; i < length; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     progressList[i] = start + diff * i;
   }
 
@@ -14,24 +14,22 @@ const getRandomProgressList = (length, start, diff) => {
 
 const introductoryQuestion = 'What number is missing in the progression?';
 
-export default () => {
-  const initGame = () => {
-    const listLength = 10;
-    const rundomElementPosition = getRandomInt(1, listLength);
-    const diff = getRandomInt(1, 10);
-    const startList = getRandomInt(1, 10);
-    const list = getRandomProgressList(listLength, startList, diff);
+const setDataForGame = () => {
+  const progressionLength = 10;
+  const rundomElementPosition = getRandomInt(0, progressionLength - 1);
+  const diff = getRandomInt(1, 10);
+  const startProgression = getRandomInt(1, 10);
+  const progression = getRandomProgression(progressionLength, startProgression, diff);
 
-    list.splice(rundomElementPosition, 1, '..');
+  progression.splice(rundomElementPosition, 1, '..');
 
-    const correctAnswer = String(startList + diff * rundomElementPosition);
-    const question = list;
+  const correctAnswer = String(startProgression + diff * rundomElementPosition);
+  const question = progression;
 
-    return {
-      question,
-      correctAnswer,
-    };
+  return {
+    question,
+    correctAnswer,
   };
-
-  gameEngine(introductoryQuestion, initGame);
 };
+
+export default gameEngine(introductoryQuestion, setDataForGame);
