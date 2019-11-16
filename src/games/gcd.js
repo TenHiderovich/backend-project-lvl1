@@ -15,10 +15,10 @@ const getNod = (a, b) => {
 const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
 const getDataForGame = () => {
-  const randomIntFirst = getRandomInt(1, 100);
-  const randomIntSecond = getRandomInt(1, 100);
-  const question = `${randomIntFirst}  ${randomIntSecond}`;
-  const correctAnswer = String(getNod(randomIntFirst, randomIntSecond));
+  const randomValueFirst = getRandomInt(1, 100);
+  const randomValueSecond = getRandomInt(1, 100);
+  const question = `${randomValueFirst}  ${randomValueSecond}`;
+  const correctAnswer = String(getNod(randomValueFirst, randomValueSecond));
 
   return {
     question,

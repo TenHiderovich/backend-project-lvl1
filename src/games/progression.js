@@ -3,13 +3,13 @@ import gameEngine from '..';
 import getRandomInt from '../getRandomInt';
 
 const getRandomProgression = (progressionLength, start, diff) => {
-  const progressList = [];
+  const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    progressList[i] = start + diff * i;
+    progression[i] = start + diff * i;
   }
 
-  return progressList;
+  return progression;
 };
 
 const introductoryQuestion = 'What number is missing in the progression?';

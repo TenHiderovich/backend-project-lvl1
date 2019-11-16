@@ -5,15 +5,13 @@ import getRandomInt from '../getRandomInt';
 const introductoryQuestion = 'What is the result of the expression?';
 
 const getDataForGame = () => {
-  const randomIntFirst = getRandomInt(1, 100);
-  const randomIntSecond = getRandomInt(1, 100);
+  const randomValueFirst = getRandomInt(1, 100);
+  const randomValueSecond = getRandomInt(1, 100);
 
-  // Вынести на уровень модуля не получится так как randomIntFirst и randomIntSecond
-  // зависят от контекста функции
   const expressions = {
-    '+': randomIntFirst + randomIntSecond,
-    '-': randomIntFirst - randomIntSecond,
-    '*': randomIntFirst * randomIntSecond,
+    '+': randomValueFirst + randomValueSecond,
+    '-': randomValueFirst - randomValueSecond,
+    '*': randomValueFirst * randomValueSecond,
   };
 
   const mathExpressions = Object.keys(expressions);
@@ -21,7 +19,7 @@ const getDataForGame = () => {
   const randomInt = getRandomInt(0, mathExpressions.length - 1);
   const selectedExpression = mathExpressions[randomInt];
   const correctAnswer = String(expressions[selectedExpression]);
-  const question = `${randomIntFirst} ${selectedExpression} ${randomIntSecond}`;
+  const question = `${randomValueFirst} ${selectedExpression} ${randomValueSecond}`;
 
   return {
     correctAnswer,
