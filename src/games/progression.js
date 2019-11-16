@@ -13,9 +13,9 @@ const getRandomProgression = (progressionLength, start, diff) => {
 };
 
 const introductoryQuestion = 'What number is missing in the progression?';
+const progressionLength = 10;
 
 const getDataForGame = () => {
-  const progressionLength = 10;
   const rundomElementPosition = getRandomInt(0, progressionLength - 1);
   const diff = getRandomInt(1, 10);
   const startProgression = getRandomInt(1, 10);
