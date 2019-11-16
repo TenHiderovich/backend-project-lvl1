@@ -4,7 +4,7 @@ import getRandomInt from '../getRandomInt';
 
 const introductoryQuestion = 'What is the result of the expression?';
 
-const setDataForGame = () => {
+const getDataForGame = () => {
   const randomIntFirst = getRandomInt(1, 100);
   const randomIntSecond = getRandomInt(1, 100);
 
@@ -29,4 +29,4 @@ const setDataForGame = () => {
   };
 };
 
-export default () => gameEngine(introductoryQuestion, setDataForGame);
+export default () => gameEngine(introductoryQuestion, getDataForGame);

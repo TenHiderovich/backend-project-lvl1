@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const gameTotal = 3;
 
-export default (introductoryQuestion, setDataForGame) => {
+export default (introductoryQuestion, getDataForGame) => {
   console.log('Welcome to the Brain Games!');
   console.log(introductoryQuestion);
 
@@ -11,7 +11,7 @@ export default (introductoryQuestion, setDataForGame) => {
 
 
   const iter = (startCountValue) => {
-    const { question, correctAnswer } = setDataForGame();
+    const { question, correctAnswer } = getDataForGame();
 
     if (startCountValue >= gameTotal) {
       console.log(`Congratulations, ${userName}!`);
@@ -22,7 +22,7 @@ export default (introductoryQuestion, setDataForGame) => {
 
     const answer = readlineSync.question('Your answer: ').toLowerCase();
 
-    if (correctAnswer === String(answer)) {
+    if (correctAnswer === answer) {
       console.log('Correct!');
       iter(startCountValue + 1);
     } else {

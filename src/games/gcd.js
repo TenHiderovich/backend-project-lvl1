@@ -14,7 +14,7 @@ const getNod = (a, b) => {
 
 const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
-const setDataForGame = () => {
+const getDataForGame = () => {
   const randomIntFirst = getRandomInt(1, 100);
   const randomIntSecond = getRandomInt(1, 100);
   const question = `${randomIntFirst}  ${randomIntSecond}`;
@@ -26,4 +26,4 @@ const setDataForGame = () => {
   };
 };
 
-export default () => gameEngine(introductoryQuestion, setDataForGame);
+export default () => gameEngine(introductoryQuestion, getDataForGame);
