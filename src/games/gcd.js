@@ -2,14 +2,14 @@ import gameEngine from '..';
 
 import getRandomInt from '../getRandomInt';
 
-const getNod = (a, b) => {
+const getGreatestCommonDivisor = (a, b) => {
   if (b > a) {
-    return getNod(b, a);
+    return getGreatestCommonDivisor(b, a);
   }
 
   if (!b) return a;
 
-  return getNod(b, a % b);
+  return getGreatestCommonDivisor(b, a % b);
 };
 
 const introductoryQuestion = 'Find the greatest common divisor of given numbers';
@@ -18,7 +18,7 @@ const getDataForGame = () => {
   const randomValueFirst = getRandomInt(1, 100);
   const randomValueSecond = getRandomInt(1, 100);
   const question = `${randomValueFirst}  ${randomValueSecond}`;
-  const correctAnswer = String(getNod(randomValueFirst, randomValueSecond));
+  const correctAnswer = String(getGreatestCommonDivisor(randomValueFirst, randomValueSecond));
 
   return {
     question,
