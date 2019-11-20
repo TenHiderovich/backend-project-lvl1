@@ -19,7 +19,7 @@ const getGameData = () => {
   const secondValue = getRandomValue(1, 100);
 
   const mathematicalExpressionsKeys = Object.keys(mathematicalExpressions);
-  const randomValue = getRandomValue(0, mathematicalExpressions.length - 1);
+  const randomValue = getRandomValue(0, mathematicalExpressionsKeys.length - 1);
   const mathematicalExpressionKey = mathematicalExpressionsKeys[randomValue];
 
   const selectedMathematicalExpression = mathematicalExpressions[mathematicalExpressionKey];
