@@ -7,8 +7,9 @@ brain-games-hiderovich
 ### Setup
     $ make install
 
+--------
 ### Brain-progression
-----------
+=========================
 #### Start
     brain-progression
 #### Description
@@ -18,9 +19,9 @@ brain-games-hiderovich
 [![asciicast](https://asciinema.org/a/HDi185oTNQ56oKp3B7rpGb8si.svg)](https://asciinema.org/a/HDi185oTNQ56oKp3B7rpGb8si)
 
     
-
+-----
 ### Brain-prime
-----------
+=========================
 #### Start
     brain-prime
 #### Description
@@ -30,8 +31,9 @@ brain-games-hiderovich
 [![asciicast](https://asciinema.org/a/4ceB76JoMh5mBUh6ZGAJ5gpzd.svg)](https://asciinema.org/a/4ceB76JoMh5mBUh6ZGAJ5gpzd)
 
 
+-------
 ### Brain-even
-----------
+=========================
 #### Start
     brain-even
 #### Description
@@ -41,8 +43,9 @@ brain-games-hiderovich
 [![asciicast](https://asciinema.org/a/SnVn2HpsJ0OBDM3QupCCZwxSq.svg)](https://asciinema.org/a/SnVn2HpsJ0OBDM3QupCCZwxSq)
 
 
+------
 ### Brain-Calc
-----------
+=========================
 #### Start
     brain-calc
     
@@ -51,8 +54,11 @@ brain-games-hiderovich
 
 [![asciicast](https://asciinema.org/a/MGM0TerR4BhuNpOvcBcGfTlLm.svg)](https://asciinema.org/a/MGM0TerR4BhuNpOvcBcGfTlLm)
 
+
+
+-------
 ### Brain-gcd
-----------
+=========================
 #### Start
     brain-gcd
 #### Description
