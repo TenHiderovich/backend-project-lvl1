@@ -1,6 +1,6 @@
 import gameEngine from '..';
 
-import getRandomInt from '../getRandomInt';
+import getRandomValue from '../getRandomValue';
 
 const getGreatestCommonDivisor = (a, b) => {
   if (b > a) {
@@ -14,11 +14,11 @@ const getGreatestCommonDivisor = (a, b) => {
 
 const introductoryQuestion = 'Find the greatest common divisor of given numbers';
 
-const getDataForGame = () => {
-  const randomValueFirst = getRandomInt(1, 100);
-  const randomValueSecond = getRandomInt(1, 100);
-  const question = `${randomValueFirst}  ${randomValueSecond}`;
-  const correctAnswer = String(getGreatestCommonDivisor(randomValueFirst, randomValueSecond));
+const getGameData = () => {
+  const firstValue = getRandomValue(1, 100);
+  const secondValue = getRandomValue(1, 100);
+  const question = `${firstValue} ${secondValue}`;
+  const correctAnswer = String(getGreatestCommonDivisor(firstValue, secondValue));
 
   return {
     question,
@@ -26,4 +26,4 @@ const getDataForGame = () => {
   };
 };
 
-export default () => gameEngine(introductoryQuestion, getDataForGame);
+export default () => gameEngine(introductoryQuestion, getGameData);

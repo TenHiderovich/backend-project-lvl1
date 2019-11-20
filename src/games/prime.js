@@ -1,6 +1,6 @@
 import gameEngine from '..';
 
-import getRandomInt from '../getRandomInt';
+import getRandomValue from '../getRandomValue';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -25,9 +25,9 @@ const isPrime = (num) => {
 
 const introductoryQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getDataForGame = () => {
-  const question = getRandomInt(2, 100);
-  const correctAnswer = String(isPrime(question) ? 'yes' : 'no');
+const getGameData = () => {
+  const question = getRandomValue(2, 100);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return {
     question,
@@ -35,4 +35,4 @@ const getDataForGame = () => {
   };
 };
 
-export default () => gameEngine(introductoryQuestion, getDataForGame);
+export default () => gameEngine(introductoryQuestion, getGameData);

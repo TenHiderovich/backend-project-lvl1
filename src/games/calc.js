@@ -1,25 +1,25 @@
 import gameEngine from '..';
 
-import getRandomInt from '../getRandomInt';
+import getRandomValue from '../getRandomValue';
 
 const introductoryQuestion = 'What is the result of the expression?';
 
-const getDataForGame = () => {
-  const randomValueFirst = getRandomInt(1, 100);
-  const randomValueSecond = getRandomInt(1, 100);
+const getGameData = () => {
+  const firstValue = getRandomValue(1, 100);
+  const secondValue = getRandomValue(1, 100);
 
-  const expressions = {
-    '+': randomValueFirst + randomValueSecond,
-    '-': randomValueFirst - randomValueSecond,
-    '*': randomValueFirst * randomValueSecond,
+  const mathematicalExpressions = {
+    '+': firstValue + secondValue,
+    '-': firstValue - secondValue,
+    '*': firstValue * secondValue,
   };
 
-  const mathExpressions = Object.keys(expressions);
+  const mathExpressions = Object.keys(mathematicalExpressions);
 
-  const randomInt = getRandomInt(0, mathExpressions.length - 1);
-  const selectedExpression = mathExpressions[randomInt];
-  const correctAnswer = String(expressions[selectedExpression]);
-  const question = `${randomValueFirst} ${selectedExpression} ${randomValueSecond}`;
+  const randomValue = getRandomValue(0, mathExpressions.length - 1);
+  const selectedExpression = mathExpressions[randomValue];
+  const correctAnswer = String(mathematicalExpressions[selectedExpression]);
+  const question = `${firstValue} ${selectedExpression} ${secondValue}`;
 
   return {
     correctAnswer,
@@ -27,4 +27,4 @@ const getDataForGame = () => {
   };
 };
 
-export default () => gameEngine(introductoryQuestion, getDataForGame);
+export default () => gameEngine(introductoryQuestion, getGameData);
