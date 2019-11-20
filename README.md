@@ -7,20 +7,47 @@ brain-games-hiderovich
 ### Setup
     $ make install
 
-### Start
-    $ make start
-
 ### Brain-progression
-[![asciicast](https://asciinema.org/a/yXBklegco0UjVbvGCBBjMvb5m.svg)](https://asciinema.org/a/yXBklegco0UjVbvGCBBjMvb5m)
+----------
+#### Start
+    brain-progression
+#### Description
+После запуска игры в терминале вы увидите May I have your name?. Введите свое имя и нажмите Enter.
+Далее вы увидет прогрессию из 10 чисел, одно число будет скрыто. Вам необходимо вычислить какое число скртыто и ввести его в терминал, и нажать Enter. Если введен не правильный ответ, то игра заканчивается. Если ответ верный, то вы увидете следующую прогрессию. Максимальное количество игр - 3.
+
+    
 
 ### Brain-prime
-[![asciicast](https://asciinema.org/a/VNBT0XUOYJgmlPTOJlBZLZGY5.svg)](https://asciinema.org/a/VNBT0XUOYJgmlPTOJlBZLZGY5)
+----------
+#### Start
+    brain-prime
+#### Description
+После запуска игры в терминале вы увидите May I have your name?. Введите свое имя и нажмите Enter.
+Далее вы увидет число. Если число простое, необходимо ввести "yes", если не простое то ввести "no", после этого нажать Enter. Ответ необходиом писать с маленькой буквы. Если введен не правильный ответ, то игра заканчивается. Если ответ верный, то вы увидете следующее число. Максимальное количество игр - 3.
+
 
 ### Brain-even
-[![asciicast](https://asciinema.org/a/4en54Sk3J2FhVt5XDpYJSveEA.svg)](https://asciinema.org/a/4en54Sk3J2FhVt5XDpYJSveEA)
+----------
+#### Start
+    brain-prime
+#### Description
+После запуска игры в терминале вы увидите May I have your name?. Введите свое имя и нажмите Enter.
+Далее вы увидет число. Если число четное, необходимо ввести "yes", если не четное то ввести "no", после этого нажать Enter. Ответ необходиом писать с маленькой буквы. Если введен не правильный ответ, то игра заканчивается. Если ответ верный, то вы увидете следующее число. Максимальное количество игр - 3.
+
 
 ### Brain-Calc
-[![asciicast](https://asciinema.org/a/LKm66DNe34nS96CcE0PjXCOQv.svg)](https://asciinema.org/a/LKm66DNe34nS96CcE0PjXCOQv)
+----------
+#### Start
+    brain-calc
+    
+#### Description
+После запуска игры в терминале вы увидите May I have your name?. Введите свое имя и нажмите Enter. Далее вы увидите математическое выражение. Вам необходимо ввести правельный ответ на это выражение и нажать Enter. Если введен не правильный ответ, то игра заканчивается. Если ответ верный, то вы увидете следующее математическое вражение. Максимальное количество игр - 3.
+
 
 ### Brain-gcd
-[![asciicast](https://asciinema.org/a/ZWtKGEzK4VuteIoKdJ5dl5w59.svg)](https://asciinema.org/a/ZWtKGEzK4VuteIoKdJ5dl5w59)
+----------
+#### Start
+    brain-prime
+#### Description
+После запуска игры в терминале вы увидите May I have your name?. Введите свое имя и нажмите Enter.
+Далее вы увидет два числа. Вам необходимо вычислить нибольший общий делитель и ввести его в терминал, и нажать Enter. Если введен не правильный ответ, то игра заканчивается. Если ответ верный, то вы увидете следующие два числа. Максимальное количество игр - 3.
