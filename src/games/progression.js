@@ -16,14 +16,14 @@ const introductoryQuestion = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const getGameData = () => {
-  const rundomElementPosition = getRandomValue(0, progressionLength - 1);
+  const indexElementPosition = getRandomValue(0, progressionLength - 1);
   const diff = getRandomValue(1, 10);
   const startProgression = getRandomValue(1, 10);
   const progression = getProgression(progressionLength, startProgression, diff);
 
-  progression.splice(rundomElementPosition, 1, '..');
+  progression.splice(indexElementPosition, 1, '..');
 
-  const correctAnswer = String(startProgression + diff * rundomElementPosition);
+  const correctAnswer = String(startProgression + diff * indexElementPosition);
   const question = progression;
 
   return {
